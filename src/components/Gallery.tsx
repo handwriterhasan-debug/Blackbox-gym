@@ -24,7 +24,7 @@ export default function Gallery() {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <div className="grid grid-cols-4 gap-1 sm:gap-4">
           {images.map((src, index) => {
             // Create a masonry-like feel by making some items span rows
             const isLarge = index === 0 || index === 3;
@@ -35,7 +35,7 @@ export default function Gallery() {
                 whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true, margin: "-50px" }}
                 transition={{ duration: 0.5, delay: index * 0.05 }}
-                className={`relative overflow-hidden group border border-zinc-800 ${isLarge ? 'row-span-2' : ''} aspect-square ${isLarge ? 'md:aspect-[1/2]' : ''}`}
+                className={`relative overflow-hidden group border border-zinc-800 ${isLarge ? 'row-span-2' : ''} aspect-square ${isLarge ? 'md:aspect-[1/2]' : ''} rounded-2xl shadow-lg`}
               >
                 <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-10 pointer-events-none mix-blend-color"></div>
                 <img 

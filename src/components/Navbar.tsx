@@ -45,7 +45,7 @@ export default function Navbar() {
               ))}
               <a
                 href="#pricing"
-                className="bg-primary text-black px-6 py-2.5 text-[11px] font-black uppercase tracking-tighter hover:bg-white transition-all shadow-[0_0_15px_rgba(198,255,0,0.3)]"
+                className="bg-primary text-black px-6 py-2.5 text-[11px] font-black uppercase tracking-tighter hover:bg-white transition-all shadow-[0_0_15px_rgba(198,255,0,0.3)] hover:shadow-[0_0_25px_rgba(198,255,0,0.5)] rounded-full"
               >
                 Join Now
               </a>
@@ -54,7 +54,7 @@ export default function Navbar() {
           <div className="md:hidden">
             <button
               onClick={() => setIsOpen(!isOpen)}
-              className="text-gray-300 hover:text-white focus:outline-none"
+              className="text-gray-300 hover:text-white focus:outline-none p-2 rounded-full hover:bg-white/10 transition-colors"
             >
               {isOpen ? <X className="h-8 w-8" /> : <Menu className="h-8 w-8" />}
             </button>
@@ -63,14 +63,14 @@ export default function Navbar() {
       </div>
 
       {isOpen && (
-        <div className="md:hidden bg-[#0D0D0D]/95 backdrop-blur-md border-b border-white/10">
+        <div className="md:hidden bg-[#0D0D0D]/95 backdrop-blur-md border-b border-white/10 rounded-b-3xl shadow-2xl">
           <div className="px-4 pt-2 pb-6 space-y-2">
             {navLinks.map((link) => (
               <a
                 key={link.name}
                 href={link.href}
                 onClick={() => setIsOpen(false)}
-                className="block px-3 py-3 text-[11px] uppercase tracking-widest font-bold text-gray-300 hover:text-primary hover:bg-white/5"
+                className="block px-4 py-4 text-xs uppercase tracking-widest font-bold text-gray-300 hover:text-primary hover:bg-white/5 border-l-2 border-transparent hover:border-primary rounded-xl"
               >
                 {link.name}
               </a>
@@ -78,7 +78,7 @@ export default function Navbar() {
             <a
               href="#pricing"
               onClick={() => setIsOpen(false)}
-              className="block w-full text-center mt-4 bg-primary text-black px-6 py-3 text-[11px] font-black uppercase tracking-tighter hover:bg-white transition-all shadow-[0_0_15px_rgba(198,255,0,0.3)]"
+              className="block w-full text-center mt-4 bg-primary text-black px-6 py-4 text-xs font-black uppercase tracking-tighter hover:bg-white transition-all shadow-[0_0_15px_rgba(198,255,0,0.3)] hover:shadow-[0_0_25px_rgba(198,255,0,0.5)] rounded-full"
             >
               Join Now
             </a>

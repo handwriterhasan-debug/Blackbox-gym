@@ -19,7 +19,7 @@ export default function Stats() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="bg-zinc-900 border border-white/5 p-6"
+              className="bg-zinc-900 border border-white/5 p-6 rounded-2xl shadow-xl"
             >
               <div className="text-4xl md:text-5xl font-black text-primary mb-2">
                 {stat.value}

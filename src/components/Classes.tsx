@@ -54,7 +54,7 @@ export default function Classes() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-3 gap-2 sm:gap-4">
           {classesList.map((cls, index) => (
             <motion.div
               key={index}
@@ -62,7 +62,7 @@ export default function Classes() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="bg-zinc-900 border border-white/5 p-8 relative overflow-hidden group min-h-[300px] flex flex-col justify-end transition-colors hover:border-primary/50"
+              className="bg-zinc-900 border border-white/5 p-2 sm:p-8 relative overflow-hidden group min-h-[100px] sm:min-h-[300px] flex flex-col justify-end transition-colors hover:border-primary/50 rounded-2xl shadow-lg"
             >
               <div className="absolute inset-0 z-0">
                 <img 
@@ -73,29 +73,29 @@ export default function Classes() {
                 <div className="absolute inset-0 bg-gradient-to-t from-black via-black/80 to-transparent pointer-events-none"></div>
               </div>
               
-              <div className="relative z-10">
-                <div className="flex gap-2 mb-2">
-                  <span className="text-[10px] text-primary font-bold uppercase tracking-widest">
+              <div className="relative z-10 w-full overflow-hidden">
+                <div className="flex gap-1 sm:gap-2 mb-1 sm:mb-2 flex-wrap">
+                  <span className="text-[6px] sm:text-[10px] text-primary font-bold uppercase tracking-widest whitespace-nowrap">
                     {cls.duration}
                   </span>
-                  <span className="text-[10px] text-zinc-500 font-bold uppercase tracking-widest">
+                  <span className="text-[6px] sm:text-[10px] text-zinc-500 font-bold uppercase tracking-widest whitespace-nowrap">
                     • {cls.difficulty}
                   </span>
                 </div>
                 
-                <h3 className="text-3xl font-black uppercase italic text-white mb-4 group-hover:text-primary transition-colors">
+                <h3 className="text-sm sm:text-3xl font-black uppercase italic text-white mb-2 sm:mb-4 group-hover:text-primary transition-colors leading-tight truncate">
                   {cls.name}
                 </h3>
                 
                 <a 
                   href="#contact" 
-                  className="inline-flex items-center text-white font-sans uppercase font-bold text-[10px] tracking-widest group-hover:text-primary transition-colors"
+                  className="inline-flex items-center text-white font-sans uppercase font-bold text-[6px] sm:text-[10px] tracking-widest group-hover:text-primary transition-colors"
                 >
-                  Book Class <ArrowRight className="ml-2 w-4 h-4 transition-transform group-hover:translate-x-2" />
+                  <span className="hidden sm:inline">Book Class</span><span className="sm:hidden">Book</span> <ArrowRight className="ml-1 sm:ml-2 w-2 h-2 sm:w-4 sm:h-4 transition-transform group-hover:translate-x-1 sm:group-hover:translate-x-2" />
                 </a>
               </div>
               
-              <div className="absolute bottom-[-20px] right-[-10px] text-[8rem] font-black text-white/5 italic leading-none pointer-events-none select-none">
+              <div className="absolute bottom-1 sm:bottom-[-20px] right-1 sm:right-[-10px] text-2xl sm:text-[8rem] font-black text-white/5 italic leading-none pointer-events-none select-none">
                 {String(index + 1).padStart(2, '0')}
               </div>
             </motion.div>

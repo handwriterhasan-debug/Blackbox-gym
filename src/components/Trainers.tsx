@@ -34,7 +34,7 @@ export default function Trainers() {
           </a>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-y-12 gap-x-8">
+        <div className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-y-6 gap-x-2 sm:gap-y-12 sm:gap-x-8">
           {trainers.map((trainer, index) => (
             <motion.div
               key={index}
@@ -44,7 +44,7 @@ export default function Trainers() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="group cursor-pointer"
             >
-              <div className="relative overflow-hidden aspect-[3/4] mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 border border-zinc-800 bg-zinc-900 flex items-center justify-center text-[100px] select-none">
+              <div className="relative overflow-hidden aspect-[3/4] mb-2 sm:mb-6 grayscale group-hover:grayscale-0 transition-all duration-500 border border-zinc-800 bg-zinc-900 flex items-center justify-center text-4xl sm:text-[100px] select-none rounded-2xl shadow-lg">
                 {trainer.image ? (
                   <img 
                     src={trainer.image} 
@@ -56,19 +56,19 @@ export default function Trainers() {
                 )}
                 
                 {/* Overlay social icons */}
-                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-4">
-                  <a href="#" className="w-12 h-12 bg-primary text-black flex items-center justify-center hover:bg-white hover:scale-110 transition-all border border-transparent">
-                    <Instagram className="w-5 h-5" />
+                <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center gap-1 sm:gap-4 rounded-2xl">
+                  <a href="#" className="w-6 h-6 sm:w-12 sm:h-12 bg-primary text-black flex items-center justify-center hover:bg-white hover:scale-110 transition-all border border-transparent rounded-full shadow-md">
+                    <Instagram className="w-3 h-3 sm:w-5 sm:h-5" />
                   </a>
-                  <a href="#" className="w-12 h-12 bg-white text-black flex items-center justify-center hover:bg-primary hover:scale-110 transition-all border border-transparent">
-                    <Twitter className="w-5 h-5" />
+                  <a href="#" className="w-6 h-6 sm:w-12 sm:h-12 bg-white text-black flex items-center justify-center hover:bg-primary hover:scale-110 transition-all border border-transparent rounded-full shadow-md">
+                    <Twitter className="w-3 h-3 sm:w-5 sm:h-5" />
                   </a>
                 </div>
               </div>
               
-              <div className="text-center">
-                <h3 className="text-2xl font-display text-white uppercase">{trainer.name}</h3>
-                <p className="text-primary font-sans text-sm font-bold uppercase tracking-widest mt-1">{trainer.specialty}</p>
+              <div className="text-center px-1">
+                <h3 className="text-sm sm:text-2xl font-display text-white uppercase truncate">{trainer.name}</h3>
+                <p className="text-primary font-sans text-[8px] sm:text-sm font-bold uppercase tracking-widest mt-1 truncate">{trainer.specialty}</p>
               </div>
             </motion.div>
           ))}

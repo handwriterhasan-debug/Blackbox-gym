@@ -38,7 +38,7 @@ export default function Pricing() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 items-stretch">
+        <div className="grid grid-cols-3 gap-2 sm:gap-6 items-stretch">
           {plans.map((plan, index) => (
             <motion.div
               key={plan.name}
@@ -46,48 +46,48 @@ export default function Pricing() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
-              className={`relative ${plan.isPopular ? 'bg-white text-black lg:scale-105 z-10' : 'bg-zinc-900 border border-white/5 text-white'} p-8 flex flex-col h-full`}
+              className={`relative ${plan.isPopular ? 'bg-white text-black lg:scale-105 z-10' : 'bg-zinc-900 border border-white/5 text-white'} p-2 sm:p-8 flex flex-col h-full rounded-2xl shadow-xl hover:shadow-2xl transition-shadow`}
             >
               {plan.isPopular && (
-                <div className="text-black text-[10px] font-black uppercase tracking-widest mb-2">
+                <div className="text-black text-[8px] sm:text-[10px] font-black uppercase tracking-widest mb-1 sm:mb-2 leading-tight">
                   Most Popular Plan
                 </div>
               )}
               {!plan.isPopular && (
-                <div className="text-primary text-[10px] font-bold uppercase tracking-widest mb-2">
+                <div className="text-primary text-[8px] sm:text-[10px] font-bold uppercase tracking-widest mb-1 sm:mb-2 leading-tight">
                   Membership Tier
                 </div>
               )}
               
-              <div className="mb-6">
-                <h3 className={`text-4xl font-black uppercase leading-none mb-2 tracking-tighter ${plan.isPopular ? 'text-black' : 'text-white'}`}>{plan.name}</h3>
-                <p className={`text-xs ${plan.isPopular ? 'text-zinc-500' : 'text-zinc-400'} h-8`}>{plan.description}</p>
+              <div className="mb-2 sm:mb-6">
+                <h3 className={`text-lg sm:text-4xl font-black uppercase leading-none mb-1 sm:mb-2 tracking-tighter ${plan.isPopular ? 'text-black' : 'text-white'}`}>{plan.name}</h3>
+                <p className={`text-[9px] sm:text-xs ${plan.isPopular ? 'text-zinc-500' : 'text-zinc-400'} h-8 sm:h-8 hidden sm:block`}>{plan.description}</p>
               </div>
 
               <div className="flex-grow">
-                <ul className="space-y-4 mb-8">
+                <ul className="space-y-1 sm:space-y-4 mb-4 sm:mb-8">
                   {plan.features.map((feature, i) => (
-                    <li key={i} className={`flex items-start text-sm ${plan.isPopular ? 'text-black' : 'text-zinc-300'}`}>
-                      <Check className={`w-4 h-4 mr-3 shrink-0 ${plan.isPopular ? 'text-black' : 'text-primary'}`} />
-                      <span>{feature}</span>
+                    <li key={i} className={`flex items-start text-[8px] sm:text-sm ${plan.isPopular ? 'text-black' : 'text-zinc-300'}`}>
+                      <Check className={`w-2 h-2 sm:w-4 sm:h-4 mr-1 sm:mr-3 shrink-0 ${plan.isPopular ? 'text-black' : 'text-primary'}`} />
+                      <span className="leading-tight">{feature}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
               <div className="mt-auto">
-                <div className="flex items-baseline gap-2 mb-6">
-                  <span className={`text-5xl font-black tracking-tighter ${plan.isPopular ? 'text-black' : 'text-white'}`}>
+                <div className="flex items-baseline gap-1 sm:gap-2 mb-2 sm:mb-6 flex-wrap">
+                  <span className={`text-xl sm:text-5xl font-black tracking-tighter ${plan.isPopular ? 'text-black' : 'text-white'}`}>
                     {plan.price}
                   </span>
-                  <span className={`font-bold uppercase text-[10px] tracking-widest ${plan.isPopular ? 'text-zinc-500' : 'text-zinc-500'}`}>
-                    / Month
+                  <span className={`font-bold uppercase text-[8px] sm:text-[10px] tracking-widest ${plan.isPopular ? 'text-zinc-500' : 'text-zinc-500'}`}>
+                    / Mo
                   </span>
                 </div>
 
                 <a 
                   href="#contact" 
-                  className={`block w-full text-center py-4 font-black uppercase text-sm tracking-tighter transition-all duration-300 ${plan.isPopular ? 'bg-[#0D0D0D] text-primary hover:bg-black hover:text-white shadow-[0_4px_20px_rgba(0,0,0,0.15)]' : 'border border-white/20 text-white hover:bg-white/10'}`}
+                  className={`block w-full text-center py-2 sm:py-4 font-black uppercase text-[9px] sm:text-sm tracking-tighter transition-all duration-300 rounded-full ${plan.isPopular ? 'bg-[#0D0D0D] text-primary hover:bg-black hover:text-white shadow-[0_4px_20px_rgba(0,0,0,0.15)]' : 'border border-white/20 text-white hover:bg-white/10'}`}
                 >
                   Select Plan
                 </a>

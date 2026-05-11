@@ -38,7 +38,7 @@ export default function SuccessStories() {
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-3 gap-2 sm:gap-8">
           {stories.map((story, index) => (
             <motion.div
               key={index}
@@ -46,21 +46,21 @@ export default function SuccessStories() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.15 }}
-              className="bg-[#111111] border border-zinc-800 p-8 relative flex flex-col pt-12 mt-12 hover:border-primary/50 transition-colors"
+              className="bg-[#111111] border border-zinc-800 p-2 pt-8 sm:p-8 relative flex flex-col sm:pt-12 mt-6 sm:mt-12 hover:border-primary/50 transition-colors rounded-2xl shadow-xl"
             >
-              <div className="absolute -top-12 left-8 w-24 h-24 border-4 border-black bg-zinc-900 flex items-center justify-center text-5xl box-content">
+              <div className="absolute -top-4 sm:-top-12 left-2 sm:left-8 w-8 h-8 sm:w-24 sm:h-24 border-2 sm:border-4 border-black bg-zinc-900 flex items-center justify-center text-sm sm:text-5xl box-content rounded-full shadow-lg">
                 {story.emoji}
               </div>
               
-              <Quote className="text-primary w-8 h-8 mb-6" />
+              <Quote className="text-primary w-3 h-3 sm:w-8 sm:h-8 mb-2 sm:mb-6" />
               
-              <p className="text-gray-300 italic font-sans mb-8 flex-grow">
+              <p className="text-gray-300 italic font-sans mb-2 sm:mb-8 flex-grow text-[7px] sm:text-base leading-tight">
                 "{story.quote}"
               </p>
               
-              <div className="border-t border-zinc-800 pt-6">
-                <h4 className="text-white font-display text-xl uppercase tracking-wider">{story.name}</h4>
-                <p className="text-primary font-sans text-sm font-bold uppercase mt-1">{story.achievement}</p>
+              <div className="border-t border-zinc-800 pt-2 sm:pt-6">
+                <h4 className="text-white font-display text-[8px] sm:text-xl uppercase tracking-wider truncate">{story.name}</h4>
+                <p className="text-primary font-sans text-[6px] sm:text-sm font-bold uppercase mt-0.5 sm:mt-1 truncate">{story.achievement}</p>
               </div>
             </motion.div>
           ))}

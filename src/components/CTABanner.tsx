@@ -16,18 +16,18 @@ export default function CTABanner() {
           transition={{ duration: 0.5 }}
           className="flex flex-col items-center"
         >
-          <div className="text-black text-[13px] font-black uppercase leading-tight mb-4 tracking-widest">
+          <div className="text-black text-[10px] sm:text-[13px] font-black uppercase leading-tight mb-2 sm:mb-4 tracking-widest">
             Special Offer For New Members
           </div>
-          <h2 className="text-5xl sm:text-7xl lg:text-[6rem] font-black tracking-tighter text-black uppercase leading-[0.85] mb-6">
+          <h2 className="text-4xl sm:text-7xl lg:text-[6rem] font-black tracking-tighter text-black uppercase leading-[0.85] mb-4 sm:mb-6">
             Get Fit In Less Than<br/>4 Weeks With Us
           </h2>
-          <p className="text-sm sm:text-base text-black/80 font-sans mb-10 max-w-2xl mx-auto font-medium">
+          <p className="text-xs sm:text-base text-black/80 font-sans mb-6 sm:mb-10 max-w-2xl mx-auto font-medium">
             No excuses. Just results. Join today in Los Angeles and claim your throne.
           </p>
           <a 
             href="#pricing" 
-            className="inline-block bg-[#0D0D0D] text-primary px-12 py-5 text-sm font-black uppercase tracking-tighter hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)]"
+            className="inline-block bg-[#0D0D0D] text-primary px-8 sm:px-12 py-3 sm:py-5 text-[10px] sm:text-sm font-black uppercase tracking-tighter hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 shadow-[0_10px_30px_rgba(0,0,0,0.3)] rounded-full"
           >
             Join Now
           </a>

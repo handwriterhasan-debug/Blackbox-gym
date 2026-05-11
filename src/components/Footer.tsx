@@ -24,7 +24,7 @@ export default function Footer() {
                   <label className="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2 font-bold">Full Name</label>
                   <input 
                     type="text" 
-                    className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
+                    className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm rounded-xl"
                     placeholder="Enter your name"
                   />
                 </div>
@@ -32,7 +32,7 @@ export default function Footer() {
                   <label className="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2 font-bold">Phone Number</label>
                   <input 
                     type="tel" 
-                    className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
+                    className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm rounded-xl"
                     placeholder="e.g. 03XX-XXXXXXX"
                   />
                 </div>
@@ -41,7 +41,7 @@ export default function Footer() {
                 <label className="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2 font-bold">Email Address</label>
                 <input 
                   type="email" 
-                  className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm"
+                  className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm rounded-xl"
                   placeholder="your@email.com"
                 />
               </div>
@@ -49,13 +49,13 @@ export default function Footer() {
                 <label className="block text-zinc-500 text-[10px] uppercase tracking-widest mb-2 font-bold">Message / Goals</label>
                 <textarea 
                   rows={4}
-                  className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm resize-none"
+                  className="w-full bg-zinc-900 border border-white/5 text-white px-4 py-3 focus:outline-none focus:border-primary transition-colors text-sm resize-none rounded-xl"
                   placeholder="Tell us what you want to achieve..."
                 ></textarea>
               </div>
               <button 
                 type="submit" 
-                className="w-full bg-primary text-black px-8 py-4 text-sm font-black uppercase tracking-tighter hover:bg-white transition-colors duration-300 inline-block text-center"
+                className="w-full bg-primary text-black px-8 py-4 text-sm font-black uppercase tracking-tighter hover:bg-white transition-colors duration-300 inline-block text-center rounded-full shadow-lg"
               >
                 Send Message
               </button>
@@ -75,34 +75,34 @@ export default function Footer() {
                 Head<span className="text-primary italic">quarters</span>
               </h2>
               
-              <div className="space-y-8">
+              <div className="space-y-4 sm:space-y-8">
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-zinc-900 border border-white/5 flex items-center justify-center flex-shrink-0 mr-6">
-                    <MapPin className="w-5 h-5 text-primary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-zinc-900 border border-white/5 flex items-center justify-center flex-shrink-0 mr-4 sm:mr-6 rounded-xl sm:rounded-2xl shadow-lg">
+                    <MapPin className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-white font-black text-xl uppercase mb-1 tracking-tighter">Location</h4>
-                    <p className="text-zinc-400 text-sm">Downtown<br/>Los Angeles, California</p>
+                    <h4 className="text-white font-black text-[12px] sm:text-xl uppercase mb-0.5 sm:mb-1 tracking-tighter">Location</h4>
+                    <p className="text-zinc-400 text-[10px] sm:text-sm">Downtown<br/>Los Angeles, California</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-zinc-900 border border-white/5 flex items-center justify-center flex-shrink-0 mr-6">
-                    <Phone className="w-5 h-5 text-primary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-zinc-900 border border-white/5 flex items-center justify-center flex-shrink-0 mr-4 sm:mr-6 rounded-xl sm:rounded-2xl shadow-lg">
+                    <Phone className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-white font-black text-xl uppercase mb-1 tracking-tighter">Call Us</h4>
-                    <p className="text-zinc-400 text-sm">+1 (555) 123-4567</p>
+                    <h4 className="text-white font-black text-[12px] sm:text-xl uppercase mb-0.5 sm:mb-1 tracking-tighter">Call Us</h4>
+                    <p className="text-zinc-400 text-[10px] sm:text-sm">+1 (555) 123-4567</p>
                   </div>
                 </div>
                 
                 <div className="flex items-start">
-                  <div className="w-12 h-12 bg-zinc-900 border border-white/5 flex items-center justify-center flex-shrink-0 mr-6">
-                    <Clock className="w-5 h-5 text-primary" />
+                  <div className="w-8 h-8 sm:w-12 sm:h-12 bg-zinc-900 border border-white/5 flex items-center justify-center flex-shrink-0 mr-4 sm:mr-6 rounded-xl sm:rounded-2xl shadow-lg">
+                    <Clock className="w-4 h-4 sm:w-5 sm:h-5 text-primary" />
                   </div>
                   <div>
-                    <h4 className="text-white font-black text-xl uppercase mb-1 tracking-tighter">Operating Hours</h4>
-                    <p className="text-zinc-400 text-sm">Morning: 5:00 AM - 2:00 PM<br/>Evening: 5:00 PM - 12:00 AM</p>
+                    <h4 className="text-white font-black text-[12px] sm:text-xl uppercase mb-0.5 sm:mb-1 tracking-tighter">Operating Hours</h4>
+                    <p className="text-zinc-400 text-[10px] sm:text-sm">Morning: 5:00 AM - 2:00 PM<br/>Evening: 5:00 PM - 12:00 AM</p>
                   </div>
                 </div>
               </div>

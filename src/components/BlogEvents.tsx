@@ -37,15 +37,15 @@ export default function BlogEvents() {
               Recent <span className="text-primary">Knowledge</span>
             </h2>
             
-            <div className="space-y-6">
+            <div className="space-y-2 sm:space-y-6">
               {blogs.map((blog, idx) => (
-                <div key={idx} className="flex gap-4 group cursor-pointer border border-zinc-800 bg-black p-4 hover:border-primary/50 transition-colors">
-                  <div className="w-32 h-24 flex-shrink-0 overflow-hidden bg-zinc-900">
+                <div key={idx} className="flex flex-row gap-2 sm:gap-4 group cursor-pointer border border-zinc-800 bg-black p-2 sm:p-4 hover:border-primary/50 transition-colors rounded-xl shadow-lg">
+                  <div className="w-12 h-12 sm:w-32 sm:h-24 flex-shrink-0 overflow-hidden bg-zinc-900 border-none rounded-lg">
                     <img src={blog.image} alt={blog.title} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500 group-hover:scale-105" />
                   </div>
-                  <div className="flex flex-col justify-center">
-                    <span className="text-primary font-sans text-xs uppercase tracking-widest font-bold mb-1">{blog.date}</span>
-                    <h3 className="text-white font-display text-xl uppercase group-hover:text-primary transition-colors">{blog.title}</h3>
+                  <div className="flex flex-col justify-center overflow-hidden">
+                    <span className="text-primary font-sans text-[8px] sm:text-xs uppercase tracking-widest font-bold mb-0.5 sm:mb-1">{blog.date}</span>
+                    <h3 className="text-white font-display text-[10px] sm:text-xl uppercase group-hover:text-primary transition-colors truncate">{blog.title}</h3>
                   </div>
                 </div>
               ))}
@@ -67,22 +67,22 @@ export default function BlogEvents() {
               Upcoming <span className="text-primary">Events</span>
             </h2>
             
-            <div className="bg-black border border-zinc-800 divide-y divide-zinc-800">
+            <div className="bg-black border border-zinc-800 divide-y divide-zinc-800 rounded-2xl shadow-xl overflow-hidden">
               {events.map((event, idx) => (
-                <div key={idx} className="p-6 flex items-center justify-between group hover:bg-[#151515] transition-colors cursor-pointer">
-                  <div className="flex items-center gap-6">
-                    <div className="text-center w-16">
-                      <div className="text-primary font-sans text-xs uppercase font-bold tracking-widest">
+                <div key={idx} className="p-2 sm:p-6 flex items-center justify-between group hover:bg-[#151515] transition-colors cursor-pointer">
+                  <div className="flex items-center gap-2 sm:gap-6 w-full">
+                    <div className="text-center w-10 sm:w-16 flex-shrink-0">
+                      <div className="text-primary font-sans text-[8px] sm:text-xs uppercase font-bold tracking-widest">
                         {event.date.split(' ')[0]}
                       </div>
-                      <div className="text-white font-display text-2xl">
+                      <div className="text-white font-display text-sm sm:text-2xl">
                         {event.date.split(' ')[1]}
                       </div>
                     </div>
-                    <div>
-                      <h3 className="text-white font-display text-xl uppercase group-hover:text-primary transition-colors">{event.title}</h3>
-                      <div className="flex items-center text-gray-500 font-sans text-sm mt-1">
-                        <Calendar className="w-3 h-3 mr-2" /> {event.time}
+                    <div className="overflow-hidden w-full">
+                      <h3 className="text-white font-display text-[10px] sm:text-xl uppercase group-hover:text-primary transition-colors leading-tight truncate">{event.title}</h3>
+                      <div className="flex items-center text-gray-500 font-sans text-[8px] sm:text-sm mt-0.5 sm:mt-1">
+                        <Calendar className="w-2 h-2 sm:w-3 sm:h-3 mr-1 sm:mr-2 flex-shrink-0" /> <span className="truncate">{event.time}</span>
                       </div>
                     </div>
                   </div>
